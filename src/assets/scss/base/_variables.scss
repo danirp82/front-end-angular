@@ -1,0 +1,37 @@
+// Grayscale
+$pure-black: #000000;
+$pure-white: #ffffff;
+$secondary-50: #fafafa;
+$secondary-75: #f4f4f4;
+$secondary-100: #f8f8f8;
+$secondary-200: #efefef;
+$secondary-250: #dbdbdb;
+$secondary-300: #c1c3c5;
+$secondary-400: #80868a;
+$secondary-500: #60676c;
+$secondary-600: #41494f;
+$secondary-700: #212a31;
+$secondary-800: #080f14;
+
+// error
+$error: #C72B29;
+
+//button
+$background-button: #2733D9;
+$background-button-hover: #3A47FD;
+$background-button-disabled: #BDCAD1;
+
+// spinner
+$background-spinner: #2aa7c9;
+
+// paddings
+$paddings: (
+  0: 0px,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  4: 16px,
+  5: 20px,
+  6: 24px,
+  10: 40px
+);

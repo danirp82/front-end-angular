@@ -1,0 +1,7 @@
+<div class="card" (click)="selectCard()">
+  <img [src]="client?.photo" alt="photo" />
+  <div class="initials">{{ client?.user | initialsName }}</div>
+  <div class="email" [ngStyle]="{'filter': admin ? 'blur(0px)': 'blur(5px)'}">{{ client?.email }}</div>
+  <div class="posts">{{ client?.posts }}</div>
+  <div>{{ client?.date | date: 'short' }}</div>
+</div>

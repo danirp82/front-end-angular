@@ -1,0 +1,23 @@
+<section class="detail-image"></section>
+<section class="detail-content">
+  <div class="detail-content__list">
+    <div class="detail-content__list--header">
+        <p class="photo">Photo</p>
+        <p class="user">User</p>
+        <p class="email">email</p>
+        <p class="posts">Post</p>
+        <p>Date</p>
+    </div>
+    <div
+        class="detail-content__list--card"
+        *ngFor="let client of clientsView | company : 'yoigo'"
+    >
+      <app-card [client]="client" [admin]="adminRole" (selectClient)="select($event)"></app-card>
+    </div>
+  </div>
+</section>
+<app-modal
+  *ngIf="showModal"
+  [client]="selectedClient"
+  (closeModal)="showModal = false"
+></app-modal>

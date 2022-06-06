@@ -1,0 +1,79 @@
+@import "../../../../assets/scss/utils/utils";
+$font-color: #3A5564;
+$font-color-bold: #24343D;
+$border-bottom-color: #EEF0F2;
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255,255,255, 0.8);
+  transition: all 1s;
+}
+
+.modal {
+  background-color: $pure-white;
+  width: 350px;
+  @include padding(6);
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12), 0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  border-radius: 8px;
+
+  &__icon {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    &-close {
+      height: 10px;
+      width: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__user {
+    width: 90%;
+    @include padding(4,2);
+    border-bottom: 1px solid $border-bottom-color;
+    font-size: 20px;
+    font-weight: 700;
+    color: #24343D;
+  }
+
+  &__street {
+    width: 90%;
+    @include padding(3);
+    border-bottom: 1px solid $border-bottom-color;
+    p {
+      @include padding(0,0,3,0);
+      color: $font-color;
+      font-size: 16px;
+      font-weight: 400;
+      &:nth-of-type(1) {
+        color: $font-color-bold;
+        font-weight: 500;
+      }
+      &:last-child {
+        @include padding(0);
+      }
+    }
+  }
+
+  &__address {
+    width: 90%;
+    @include padding(3);
+    border-bottom: 1px solid $border-bottom-color;
+
+    p {
+      @include padding(0,0,3,0);
+      color: #3A5564;
+      font-size: 16px;
+      font-weight: 400;
+      &:last-child {
+        @include padding(0);
+      }
+    }
+  }
+}

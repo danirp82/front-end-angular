@@ -1,0 +1,25 @@
+
+<section class="modal">
+  <div class="modal__icon">
+    <img
+      src="../../../../assets/img/close.svg"
+      class="modal__icon-close"
+      (click)="close()"
+    />
+  </div>
+  <div class="modal__user">
+    <p>{{ client?.user }}</p>
+  </div>
+  <div class="modal__street">
+    <p>{{ client?.address.streetA }}</p>
+    <p>{{ client?.address.streetB }}</p>
+    <p>{{ client?.address.streetC }}</p>
+    <p>{{ client?.address.streetD }}</p>
+  </div>
+  <div class="modal__address">
+    <p>City: {{ client?.address.city }}</p>
+    <p>State: {{ client?.address.state }}</p>
+    <p>Country: {{ client?.address.country }}</p>
+  </div>
+</section>
+

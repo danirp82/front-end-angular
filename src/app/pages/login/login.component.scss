@@ -1,0 +1,90 @@
+@import "../../../assets/scss/utils/utils";
+$font-color: #637E8C;
+$font-color-bold: #24343D;
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+
+}
+.login-image {
+  background-image: url('./../../../assets/img/unsplash.svg');
+  background-size: cover;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    width: 50%;
+    font-style: normal;
+    &:nth-last-child(n) {
+      color: $font-color-bold;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 35px;
+    }
+    &:nth-last-child(2n+1) {
+      color: $font-color;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .form-group {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 20px;
+
+      label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      input {
+        width: 100%;
+        @include padding(2);
+        font-size: 18px;
+        border: 1px solid rgba(128, 128, 128, 0.2);
+        margin-top: 5px;
+      }
+
+      .error {
+        font-size: 10px;
+        color: $error;
+      }
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      background-color: $background-button;
+      color: $pure-white;
+      @include padding(3);
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      outline: none;
+      text-align: center;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: $background-button-hover;
+    }
+    button[type="submit"]:disabled {
+      background-color: $background-button-disabled;
+    }
+  }
+}

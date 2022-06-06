@@ -1,0 +1,5 @@
+@import "../base/variables";
+@import "./functions";
+@mixin padding($top, $right: $top, $bottom: $top, $left: $right) {
+  padding: get($paddings, $top) get($paddings, $right) get($paddings, $bottom) get($paddings, $left);
+}

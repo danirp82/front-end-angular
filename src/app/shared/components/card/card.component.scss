@@ -1,0 +1,38 @@
+@import "../../../../assets/scss//utils/utils";
+$border-img: #3A5564;
+:host {
+  width: 100%;
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  @include padding(4,10);
+  border-radius: 2px;
+
+  background-color: $pure-white;
+  -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08), 0px 2px 4px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    height: 48px;
+    width: 48px;
+    border: 1px solid $border-img;
+    border-radius: 100px;
+  }
+
+  .initials, .posts {
+    width: 5%;
+  }
+  .email {
+    width: 35%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
